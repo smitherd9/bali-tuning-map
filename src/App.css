@@ -91,7 +91,34 @@ border-bottom: 1px solid white; */
 }
 
 .kab-buttons{
-  
+
+}
+
+.map-status-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+}
+
+.map-status-content {
+  text-align: center;
+  color: #ccc;
+  padding: 2rem;
+}
+
+.map-error-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.map-error-body {
+  font-size: 1rem;
+  max-width: 420px;
 }
 
 

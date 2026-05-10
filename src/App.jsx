@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -11,12 +12,18 @@ import Footer from './footer';
 library.add(fab);
 
 function App() {
+  const [activeFilter, setActiveFilter] = useState(null);
+
+  function handleFilterChange(kabupaten) {
+    setActiveFilter(prev => prev === kabupaten ? null : kabupaten);
+  }
+
   return (
     <div className="App">
       <div className="contentContainer">
         <Header />
-        <Description />
-        <MapContainer />
+        <Description activeFilter={activeFilter} onFilterChange={handleFilterChange} />
+        <MapContainer activeFilter={activeFilter} />
       </div>
       <Footer />
     </div>

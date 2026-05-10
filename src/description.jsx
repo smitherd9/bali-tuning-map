@@ -4,7 +4,9 @@ import kudelski from './img/kudelski-slo-resolver.jpg';
 import hale from './img/hale-sight-o-tuner-1970s.jpg';
 import { Container, Row, Col, Button, ButtonGroup } from 'react-bootstrap';
 
-function Description() {
+const KABUPATEN_FILTERS = ['Badung', 'Gianyar', 'Denpasar'];
+
+function Description({ activeFilter, onFilterChange }) {
   return (
     <div className="description">
       <Container fluid>
@@ -102,9 +104,23 @@ function Description() {
         <Row>
           <Col xs={12}>
             <ButtonGroup className="kab-buttons">
-              <Button variant="primary" size="lg" active>Badung</Button>
-              <Button variant="primary" size="lg" active>Gianyar</Button>
-              <Button variant="primary" size="lg" active>Denpasar</Button>
+              <Button
+                variant={activeFilter === null ? 'primary' : 'outline-primary'}
+                size="lg"
+                onClick={() => onFilterChange(null)}
+              >
+                All
+              </Button>
+              {KABUPATEN_FILTERS.map(kab => (
+                <Button
+                  key={kab}
+                  variant={activeFilter === kab ? 'primary' : 'outline-primary'}
+                  size="lg"
+                  onClick={() => onFilterChange(kab)}
+                >
+                  {kab}
+                </Button>
+              ))}
             </ButtonGroup>
           </Col>
         </Row>
