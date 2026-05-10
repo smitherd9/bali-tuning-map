@@ -1,65 +1,53 @@
 {
     "type": "AndrewTothGamelanTuningData",
-    "banjar": [ {
+    "banjar": [{
         "properties": {
             "NAME": "Peliatan",
             "ENSEMBLE_ID": "01",
             "KABUPATEN": "Gianyar",
             "coordinates": [-8.5120, 115.2749],
-            "audio": "static/media/peliatan.7645ea89.mp3",
-            "tothPlot": "static/media/peliatan-toth-plot.0b75d845.png"             
+            "audio": "audio/peliatan.mp3",
+            "tothPlot": "img/toth-plots/peliatan-toth-plot.png"
         }
-        
     },
     {
-
         "properties": {
             "NAME": "Getas",
             "ENSEMBLE_ID": "02",
             "KABUPATEN": "Gianyar",
             "coordinates": [-8.552833211627208, 115.30626172505409],
-            "audio": "static/media/getas.dd2efab1.mp3",
-            "tothPlot": "static/media/getas-toth-plot.c837b3ef.png"             
+            "audio": "audio/getas.mp3",
+            "tothPlot": "img/toth-plots/getas-toth-plot.png"
         }
     },
     {
-
         "properties": {
             "NAME": "KOKAR",
             "ENSEMBLE_ID": "03",
             "KABUPATEN": "Gianyar",
-            "coordinates": [-8.605494208711733,  115.25697201534375],
-            "audio": "static/media/kokar.d58be224.mp3",
-            "tothPlot": "static/media/kokar-toth-plot.370b2091.png"             
+            "coordinates": [-8.605494208711733, 115.25697201534375],
+            "audio": "audio/kokar.mp3",
+            "tothPlot": "img/toth-plots/kokar-toth-plot.png"
         }
     },
     {
-
         "properties": {
             "NAME": "Banjar Geladag, Pedungan",
             "ENSEMBLE_ID": "04",
             "KABUPATEN": "Kota Denpasar",
             "coordinates": [-8.690221146548055, 115.20599715475782],
-            "audio": "static/media/geladag.69f0547a.mp3",
-            "tothPlot": "static/media/gladag-toth-plot.a6921d59.png"             
+            "audio": "audio/geladag.mp3",
+            "tothPlot": "img/toth-plots/gladag-toth-plot.png"
         }
     },
     {
-
         "properties": {
             "NAME": "Banjar Dauh Kutuh, Ubung",
             "ENSEMBLE_ID": "05",
             "KABUPATEN": "Kota Denpasar",
             "coordinates": [-8.622762680532373, 115.20317446137368],
-            "audio": "static/media/dauh-kutuh-ubung.6b644c3a.mp3",
-            "tothPlot": "static/media/dauh-kutuh-ubung-toth-plot.5cff533b.png"             
+            "audio": "audio/dauh-kutuh-ubung.mp3",
+            "tothPlot": "img/toth-plots/dauh-kutuh-ubung-toth-plot.png"
         }
-    }
-    
-]
-
-
-
-
+    }]
 }
-
