@@ -32,8 +32,14 @@ text-align: inital;
   padding: 0.25em;
 }
 
-.footer-social-icons {
+.footer a {
   color: #fff;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer a:hover {
+  color: #c0d4e8;
 }
 
 .description {

@@ -37,9 +37,7 @@ function Footer() {
             </div>
             <div>
               <a href="https://smitherd9.github.io" target="_blank" rel="noreferrer">
-                <span style={{ color: '#fff' }}>
-                  <FontAwesomeIcon icon={faCopyright} /> 2021 Daniel Smither
-                </span>
+                <FontAwesomeIcon icon={faCopyright} /> 2021 Daniel Smither
               </a>
             </div>
           </Col>
