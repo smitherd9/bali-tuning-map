@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { GoogleMap, useJsApiLoader, Marker, InfoWindow } from '@react-google-maps/api';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 import mapStyles from './data/map-styles';
 import banjarData from './data/banjar.json';
-import ReactAudioPlayer from 'react-audio-player';
 
 const LIBRARIES = ['geometry', 'drawing', 'places'];
 const MAP_CENTER = { lat: -8.403449367266102, lng: 115.1592653203491 };
 const MAP_CONTAINER_STYLE = { width: '100%', height: '100vh' };
+const INFOWINDOW_OPTIONS = { maxWidth: 280 };
 
 function matchesFilter(banjar, activeFilter) {
   if (!activeFilter) return true;
@@ -48,24 +50,26 @@ function Map({ activeFilter }) {
             lng: selectedBanjar.properties.coordinates[1],
           }}
           onCloseClick={() => setSelectedBanjar(null)}
+          options={INFOWINDOW_OPTIONS}
         >
-          <div>
-            <div>
-              <h2>{selectedBanjar.properties.NAME}</h2>
-              <p>Ensemble ID: {selectedBanjar.properties.ENSEMBLE_ID}</p>
-              <p>Kabupaten: {selectedBanjar.properties.KABUPATEN}</p>
+          <div className="infowindow-card">
+            <h3 className="infowindow-name">{selectedBanjar.properties.NAME}</h3>
+            <div className="infowindow-meta">
+              <span>{selectedBanjar.properties.KABUPATEN}</span>
+              <span>ID: {selectedBanjar.properties.ENSEMBLE_ID}</span>
             </div>
-            <div>
-              <img
-                src={`${base}${selectedBanjar.properties.tothPlot}`}
-                style={{ width: '175px' }}
-                alt={`Toth frequency plot for ${selectedBanjar.properties.NAME}`}
-                loading="lazy"
-              />
-            </div>
-            <ReactAudioPlayer
+            <img
+              src={`${base}${selectedBanjar.properties.tothPlot}`}
+              className="infowindow-plot"
+              alt={`Toth frequency plot for ${selectedBanjar.properties.NAME}`}
+              loading="lazy"
+            />
+            <AudioPlayer
               src={`${base}${selectedBanjar.properties.audio}`}
-              controls
+              showJumpControls={false}
+              customAdditionalControls={[]}
+              customVolumeControls={[]}
+              className="infowindow-player"
             />
           </div>
         </InfoWindow>
@@ -99,6 +103,7 @@ export default function MapContainer({ activeFilter }) {
     return (
       <div className="map-status-container">
         <div className="map-status-content">
+          <div className="map-spinner" />
           <p>Loading map…</p>
         </div>
       </div>
