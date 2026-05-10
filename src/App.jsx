@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
 import Header from './header';
-import MapContainer from './map';
 import Description from './description';
 import Footer from './footer';
+
+const MapContainer = lazy(() => import('./map'));
 
 library.add(fab);
 
@@ -23,7 +24,13 @@ function App() {
       <div className="contentContainer">
         <Header />
         <Description activeFilter={activeFilter} onFilterChange={handleFilterChange} />
-        <MapContainer activeFilter={activeFilter} />
+        <Suspense fallback={
+          <div className="map-status-container">
+            <div className="map-status-content"><p>Loading map…</p></div>
+          </div>
+        }>
+          <MapContainer activeFilter={activeFilter} />
+        </Suspense>
       </div>
       <Footer />
     </div>

@@ -1,7 +1,7 @@
 import './App.css';
-import nagra2 from './img/Nagra-IV-S_2.jpg';
-import kudelski from './img/kudelski-slo-resolver.jpg';
-import hale from './img/hale-sight-o-tuner-1970s.jpg';
+import nagra2 from './img/Nagra-IV-S_2.webp';
+import kudelski from './img/kudelski-slo-resolver.webp';
+import hale from './img/hale-sight-o-tuner-1970s.webp';
 import { Container, Row, Col, Button, ButtonGroup } from 'react-bootstrap';
 
 const KABUPATEN_FILTERS = ['Badung', 'Gianyar', 'Denpasar'];
@@ -43,7 +43,7 @@ function Description({ activeFilter, onFilterChange }) {
           </Col>
           <Col xs={12} md={4} className="nagra">
             <div style={{ width: '100%', textAlign: 'center' }}>
-              <img src={nagra2} style={{ width: '75%', border: '1px solid black' }} alt="Nagra IV-S" />
+              <img src={nagra2} style={{ width: '75%', border: '1px solid black' }} alt="Nagra IV-S" loading="lazy" />
               <p><em>Nagra IV-S</em></p>
             </div>
           </Col>
@@ -51,12 +51,12 @@ function Description({ activeFilter, onFilterChange }) {
         <Row>
           <Col xs={12} md={4} className="nagra">
             <div style={{ width: '100%', textAlign: 'center' }}>
-              <img src={kudelski} style={{ width: '75%', border: '1px solid black' }} alt="Kudelski Slo Resolver" />
+              <img src={kudelski} style={{ width: '75%', border: '1px solid black' }} alt="Kudelski Slo Resolver" loading="lazy" />
               <p><em>Kudelski Slo Resolver</em></p>
             </div>
             <br />
             <div style={{ width: '100%', textAlign: 'center' }}>
-              <img src={hale} style={{ width: '75%', border: '1px solid black' }} alt="Hale Sight-o-Tuner 1970s" />
+              <img src={hale} style={{ width: '75%', border: '1px solid black' }} alt="Hale Sight-o-Tuner 1970s" loading="lazy" />
               <p><em>Hale Sight-o-Tuner (1970s)</em></p>
             </div>
           </Col>

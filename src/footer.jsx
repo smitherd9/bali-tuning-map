@@ -11,7 +11,7 @@ function Footer() {
         <Row>
           <Col lg={12} className="footer-col">
             <div>
-              <img src={barongLogo} style={{ width: '100px', height: '100px' }} alt="barong logo" />
+              <img src={barongLogo} style={{ width: '100px', height: '100px' }} alt="barong logo" loading="lazy" />
             </div>
             <div className="footer-social-div">
               <span className="footer-social-icons">

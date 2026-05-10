@@ -60,6 +60,7 @@ function Map({ activeFilter }) {
                 src={`${base}${selectedBanjar.properties.tothPlot}`}
                 style={{ width: '175px' }}
                 alt={`Toth frequency plot for ${selectedBanjar.properties.NAME}`}
+                loading="lazy"
               />
             </div>
             <ReactAudioPlayer

@@ -1,6 +1,6 @@
 import './App.css';
 import { Nav } from 'react-bootstrap';
-import baliMask from './img/bali_mask.jpg';
+import baliMask from './img/bali_mask.webp';
 
 function Header() {
   return (
